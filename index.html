@@ -1,9 +1,74 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>kllls - Standalone Copy</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 10px;
+        background: #fff;
+        color: #000;
+    }
+    nav {
+        background: #eee;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+    nav a {
+        margin-right: 10px;
+        color: #333;
+        text-decoration: none;
+    }
+    nav a:hover {
+        text-decoration: underline;
+    }
+    .container {
+        border: 1px solid #ccc;
+        padding: 15px;
+    }
+    button.copy-btn {
+        margin-top: 10px;
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+</style>
+</head>
 <body>
-  <h1>Thi Thu Cuc (Kelsie) Nguyen</h1>
-  <p>Welcome to my personal yet public space!</p>
-  <img src="https://cnkhdl.ftu.edu.vn/wp-content/uploads/2024/06/486335787_649958877777123_5245365101394381593_n.jpg" />
-</body>
 
+<nav>
+    <a href="#">Website</a>
+    <a href="#">Pages</a>
+    <a href="#">Assets</a>
+    <a href="#">Products & Services</a>
+    <a href="#">Content & Memberships</a>
+    <a href="#">Scheduling</a>
+</nav>
+
+<div class="container" id="content">
+    <h1>Example Content</h1>
+    <p>This is an example block of content copied without relying on any 3rd party theme or style.</p>
+    <ul>
+        <li>Fully self-contained HTML</li>
+        <li>Inline CSS only</li>
+        <li>Vanilla JS copy function</li>
+    </ul>
+</div>
+
+<button class="copy-btn" onclick="copyAllElements()">Copy All Elements</button>
+
+<script>
+function copyAllElements() {
+    const content = document.documentElement.outerHTML;
+    navigator.clipboard.writeText(content).then(() => {
+        alert("All HTML content copied to clipboard!");
+    }).catch(err => {
+        console.error("Failed to copy: ", err);
+    });
+}
+</script>
+
+</body>
 </html>
