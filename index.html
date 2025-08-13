@@ -1,74 +1,64 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>kllls - Standalone Copy</title>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 10px;
-        background: #fff;
-        color: #000;
-    }
-    nav {
-        background: #eee;
-        padding: 10px;
-        margin-bottom: 20px;
-    }
-    nav a {
-        margin-right: 10px;
-        color: #333;
-        text-decoration: none;
-    }
-    nav a:hover {
-        text-decoration: underline;
-    }
-    .container {
-        border: 1px solid #ccc;
-        padding: 15px;
-    }
-    button.copy-btn {
-        margin-top: 10px;
-        padding: 5px 10px;
-        cursor: pointer;
-    }
-</style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Home • kllls</title>
+<meta name="description" content="My personal yet public space" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%23000'/%3E%3Ctext x='50' y='58' font-size='44' text-anchor='middle' fill='%23fff' font-family='Inter'%3EK%3C/text%3E%3C/svg%3E" />
+<meta property="og:title" content="Home • kllls"/>
+<meta property="og:description" content="My personal yet public space"/>
+<meta property="og:type" content="website"/>
+
 </head>
 <body>
+  <header class="site-header" role="banner">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="Homepage">kllls</a>
+    <nav aria-label="Primary" class="nav">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list">☰</button>
+      <ul id="nav-list" class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="projects.html">Other Projects</a></li>
+      </ul>
+    </nav>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">◐</button>
+  </div>
+</header>
 
-<nav>
-    <a href="#">Website</a>
-    <a href="#">Pages</a>
-    <a href="#">Assets</a>
-    <a href="#">Products & Services</a>
-    <a href="#">Content & Memberships</a>
-    <a href="#">Scheduling</a>
-</nav>
+  <main class="container" id="content" tabindex="-1">
+    <section class="hero">
+  <h1>Hello, I'm <span class="accent">kllls</span></h1>
+  <p class="lead">Teaching Assistant at Foreign Trade University. I explore marketing analytics, data science, and human-centered AI.</p>
+  <div class="cta">
+    <a class="btn" href="publications.html">See Publications</a>
+    <a class="btn ghost" href="projects.html">Browse Projects</a>
+  </div>
+</section>
+<section>
+  <h2>Highlights</h2>
+  <ul class="highlights">
+    <li>Marketing Analytics • Consumer Behaviour • Marketing Science</li>
+    <li>Python, R, SPSS, SmartPLS, TensorFlow</li>
+    <li>Interested in ethical AI and digital consumer behavior</li>
+  </ul>
+</section>
 
-<div class="container" id="content">
-    <h1>Example Content</h1>
-    <p>This is an example block of content copied without relying on any 3rd party theme or style.</p>
-    <ul>
-        <li>Fully self-contained HTML</li>
-        <li>Inline CSS only</li>
-        <li>Vanilla JS copy function</li>
-    </ul>
-</div>
-
-<button class="copy-btn" onclick="copyAllElements()">Copy All Elements</button>
-
-<script>
-function copyAllElements() {
-    const content = document.documentElement.outerHTML;
-    navigator.clipboard.writeText(content).then(() => {
-        alert("All HTML content copied to clipboard!");
-    }).catch(err => {
-        console.error("Failed to copy: ", err);
-    });
-}
-</script>
+  </main>
+  <footer class="site-footer" role="contentinfo">
+  <div class="container footer-inner">
+    <p>© <span id="year"></span> kllls • Built with vanilla HTML/CSS/JS</p>
+    <p><a href="mailto:your.email@example.com">cucthu61@gmail.com</a></p>
+  </div>
+</footer>
+<script src="assets/js/main.js"></script>
 
 </body>
 </html>
